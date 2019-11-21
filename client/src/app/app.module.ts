@@ -10,6 +10,12 @@ import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
+import { MemberListComponent } from './member-list/member-list.component';
+import { ListsComponent } from './lists/lists.component';
+import { MessagesComponent } from './messages/messages.component';
+import { RouterModule } from '@angular/router';
+import { appRoutes } from './routes';
+import { AuthGuard } from './_guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -17,16 +23,21 @@ import { ErrorInterceptorProvider } from './_services/error.interceptor';
     ValueComponent,
     NavComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    MemberListComponent,
+    ListsComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
-    ErrorInterceptorProvider
+    ErrorInterceptorProvider,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
