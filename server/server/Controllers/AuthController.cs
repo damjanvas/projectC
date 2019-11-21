@@ -77,6 +77,8 @@ namespace server.Controllers
             {
                 token = tokenHandler.WriteToken(token)
             });
+
+
         }
     }
 }
