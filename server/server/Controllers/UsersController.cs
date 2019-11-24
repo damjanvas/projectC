@@ -11,7 +11,7 @@ using server.Dtos;
 
 namespace server.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [Route("api/users")]
     [ApiController]
     public class UsersController : ControllerBase
@@ -40,8 +40,6 @@ namespace server.Controllers
             var userToReturn = _mapper.Map<UserForDetailedDto>(user);
             return Ok(userToReturn);
         }
-
-
 
     }
 }
