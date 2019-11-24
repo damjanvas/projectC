@@ -20,23 +20,10 @@ export class MemberListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.loadService();
     this.route.data.subscribe(
       data => {
         this.users = data['users'];
       }
     );
   }
-
-  // loadService() {
-  //   this.userService.getUsers().subscribe(
-  //     (users: User[]) => {
-  //       this.users = users;
-  //     },
-  //     err => {
-  //       this.alertify.error(err);
-  //     }
-  //   )
-  // }
-
 }

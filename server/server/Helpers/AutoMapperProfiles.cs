@@ -33,6 +33,7 @@ namespace server.Helpers
                 });
 
             CreateMap<Photo, PhotoForDetailedDto>();
+            CreateMap<UserForUpdateDto, User>();
         }
     }
 }
