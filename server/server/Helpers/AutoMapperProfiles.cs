@@ -37,6 +37,8 @@ namespace server.Helpers
 
             CreateMap<PhotoForCreationDto, Photo>();
             CreateMap<Photo, PhotoForReturnDto>();
+
+            CreateMap<UserForRegisterDto, User>();
         }
     }
 }
