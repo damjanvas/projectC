@@ -1,4 +1,4 @@
-﻿using server.Helpers;
+﻿ using server.Helpers;
 using server.Models;
 using System;
 using System.Collections.Generic;
@@ -16,5 +16,6 @@ namespace server.Data
         Task<User> GetUser(int id);
         Task<Photo> GetPhoto(int id);
         Task<Photo> GetMainPhotoForUser(int userId);
+        Task<Like> GetLike(int userId, int recipientId);
     }
 }

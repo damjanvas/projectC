@@ -11,6 +11,10 @@ export class ErrorInterceptor implements HttpInterceptor {
                 err => {
                     if (err instanceof HttpErrorResponse) {
 
+                        if (err.status === 400) {
+                            return throwError(err.error);
+                        }
+
                         if (err.status === 401) {
                             return throwError(err.statusText);
                         }
